@@ -31,16 +31,6 @@ View(pred)
 ### Predicting the Test Data 
 pred$Prediction = predict(object = housing.model, newdata = model_lin_valid)
 
+## View the Predicted House Price Values
+View(pred)
 
-#### Reading Test Data
-housing.test.data = read.csv("test.csv", stringsAsFactors = FALSE)
-
-model_var_test <- c( 'Id',
-                     'OverallQual','OverallCond','YearBuilt', 'ExterQual','ExterCond',
-                     'TotalBsmtSF','HeatingQC', 
-                     'CentralAir','GrLivArea','BedroomAbvGr','KitchenAbvGr',
-                     'TotRmsAbvGrd','Fireplaces',
-                     'GarageArea','OpenPorchSF','PoolArea',
-                     'YrSold')
-test <- housing.test.data[,model_var_test]
-View(test)
